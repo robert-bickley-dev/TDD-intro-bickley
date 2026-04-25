@@ -54,7 +54,12 @@ export function makes10(num1, num2) {
  * near100(105, 10); // true
  */
 export function near100(n, distance) {
-  /* TODO */
+  const upperBoundary = 100 + distance;
+  const lowerBoundary = 100 - distance;
+  if (n >= lowerBoundary && n <= upperBoundary) {
+    return true;
+  }
+  return false;
 }
 
 /**

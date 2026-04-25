@@ -117,7 +117,18 @@ export function shareLastDigit(num1, num2) {
  * isColdAndHot(10, 50); // false
  */
 export function isColdAndHot(temp1, temp2) {
-  /* TODO */
+  let oneTempCold = false;
+  let oneTempHot = false;
+  if (temp1 < 0 || temp2 < 0) {
+    oneTempCold = true;
+  }
+  if (temp1 > 100 || temp2 > 100) {
+    oneTempHot = true;
+  }
+  if (oneTempCold && oneTempHot) {
+    return true;
+  }
+  return false;
 }
 
 /**

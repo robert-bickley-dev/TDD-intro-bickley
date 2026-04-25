@@ -188,7 +188,16 @@ export function makeSLS(str1, str2) {
  * canEnterClub(5, 5); // 1
  */
 export function canEnterClub(you, date) {
-  /* TODO */
+  const NO = 0;
+  const MAYBE = 1;
+  const YES = 2;
+  if (you <= 2 || date <= 2) {
+    return NO;
+  } else if (you < 8 && date < 8) {
+    return MAYBE;
+  } else {
+    return YES;
+  }
 }
 
 /**

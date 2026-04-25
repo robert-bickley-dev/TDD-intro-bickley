@@ -165,7 +165,9 @@ export function makeABBA(A, B) {
  * makeSLS("a", "abc"); // "aabca"
  */
 export function makeSLS(str1, str2) {
-  /* TODO */
+  const shortString = str1.length >= str2.length ? str2 : str1;
+  const longString = str1.length >= str2.length ? str1 : str2;
+  return `${shortString}${longString}${shortString}`;
 }
 
 /**

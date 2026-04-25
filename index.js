@@ -76,7 +76,10 @@ export function near100(n, distance) {
  * isMultiple35(7); // false
  */
 export function isMultiple35(n) {
-  /* TODO */
+  if (n % 3 === 0 || n % 5 === 0) {
+    return true;
+  }
+  return false;
 }
 
 /**
